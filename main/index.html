@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my editor</title>
+    <style>
+        #editor{
+            border:none!important;
+            box-shadow: none!important;
+            outline: none;
+            color:#717171;
+        }
+        p{
+            border:1px solid #f7f7f7;
+            min-height:26px;
+            line-height:26px;
+        }
+    </style>
+</head>
+<body>
+<div id="editor" class="box article-content" contenteditable="true"  spellcheck="true" role="textbox"
+     aria-multiline="true">
+    <p>在中当一个对象被传递给期望字符串作为参数的函数中时</p>
+    <p>在中当一个对象被传递给期望字符串作为参数的函数中时</p>
+</div>
+<div onmousedown="return false" ontouchstart="return false" unselectable="on">
+<span style="cursor:pointer" class="j-change">change</span></div>
+<script src="jquery.2.2.0.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
