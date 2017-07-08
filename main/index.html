@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <title>my editor</title>
     <style>
-        #editor{
-            border:none!important;
-            box-shadow: none!important;
-            outline: none;
-            color:#717171;
+        .editor-box{
+            max-width:600px;
+            margin:60px auto;
         }
-        p{
-            border:1px solid #f7f7f7;
-            min-height:26px;
-            line-height:26px;
+        .editor-content {
+            border: none !important;
+            box-shadow: none !important;
+            outline: none;
+            /*color:#717171;*/
+        }
+
+        p {
+            border: 1px solid #f7f7f7;
+            min-height: 26px;
+            line-height: 26px;
+            color: #6D7075;
+        }
+        .editor-bar{
+            width:200px;
+            height:40px;
+            line-height:40px;
+            position:absolute;
+            top:0;
+            left:0;
+            display:none;
+
+        }
+        .editor-bar .content{
+          background-color:#000;
+            border-radius:4px;
+            padding:0 8px;
+            color:#f7f7f7;
+            cursor:pointer;
         }
     </style>
 </head>
 <body>
-<div id="editor" class="box article-content" contenteditable="true"  spellcheck="true" role="textbox"
-     aria-multiline="true">
-    <p>在中当一个对象被传递给期望字符串作为参数的函数中时</p>
-    <p>在中当一个对象被传递给期望字符串作为参数的函数中时</p>
+<div class="editor-box">
+    <div id="editor" class="editor-content" contenteditable="true" spellcheck="true" role="textbox"
+         aria-multiline="true">
+        <p>在中当一个对象被传递给期望字符串作为参数的函数中时</p>
+        <p>在中当一个对象被传递给期望字符串作为参数的函数中时</p>
+    </div>
+</div>
+<div class="editor-bar j-editor-bar" onmousedown="return false" ontouchstart="return false" unselectable="on">
+    <div class="content">
+        <div><span class="j-bold">B</span></div>
+    </div>
 </div>
 <div onmousedown="return false" ontouchstart="return false" unselectable="on">
-<span style="cursor:pointer" class="j-change">change</span></div>
+    <span style="cursor:pointer" class="j-change">change</span></div>
 <script src="jquery.2.2.0.min.js"></script>
 <script src="index.js"></script>
 </body>
